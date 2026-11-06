@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link rel="stylesheet" href="avatar.css">
+</head>
+<body>
+  <div id="stage">
+    <div class="bubble">
+      <p id="msg"></p>
+      <div class="buttons">
+        <button id="drank" class="primary">I drank water 💧</button>
+        <div class="row">
+          <button id="snooze">Snooze 5 min</button>
+          <button id="dismiss" class="ghost">Dismiss</button>
+        </div>
+      </div>
+    </div>
+    <svg class="drop" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#7dd3fc"/>
+          <stop offset="1" stop-color="#2563eb"/>
+        </linearGradient>
+      </defs>
+      <path d="M50 6 C50 6 14 52 14 78 A36 36 0 0 0 86 78 C86 52 50 6 50 6 Z" fill="url(#g)"/>
+      <ellipse cx="33" cy="64" rx="6" ry="10" fill="#fff" opacity="0.45" transform="rotate(20 33 64)"/>
+      <circle class="eye" cx="39" cy="78" r="4.5" fill="#0f172a"/>
+      <circle class="eye" cx="61" cy="78" r="4.5" fill="#0f172a"/>
+      <circle cx="31" cy="88" r="4" fill="#fb7185" opacity="0.5"/>
+      <circle cx="69" cy="88" r="4" fill="#fb7185" opacity="0.5"/>
+      <path d="M42 90 Q50 98 58 90" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <script src="avatar.js"></script>
+</body>
+</html>

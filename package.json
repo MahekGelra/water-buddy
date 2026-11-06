@@ -1,0 +1,36 @@
+{
+  "name": "water-buddy",
+  "version": "0.1.0",
+  "description": "A friendly water reminder that lives in your Mac menu bar",
+  "main": "main.js",
+  "author": "Mahek",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "fast": "WB_FAST=1 electron .",
+    "icons": "node make-icons.js",
+    "pack": "electron-builder --mac --dir"
+  },
+  "build": {
+    "appId": "com.waterbuddy.app",
+    "productName": "Water Buddy",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.healthcare-fitness",
+      "icon": "assets/icon.png",
+      "identity": "-",
+      "extendInfo": {
+        "LSUIElement": true
+      }
+    }
+  },
+  "devDependencies": {
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0"
+  }
+}

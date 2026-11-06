@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>Water Buddy Settings</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; padding: 24px; background: #f0f9ff; color: #0f172a; }
+    h1 { font-size: 20px; margin: 0 0 18px; color: #1d4ed8; }
+    label { display: block; font-size: 14px; margin-bottom: 6px; font-weight: 600; }
+    select { font: inherit; font-size: 14px; padding: 8px 10px; border-radius: 8px; border: 1px solid #bae6fd; width: 100%; background: #fff; }
+    .check { margin-top: 18px; display: flex; align-items: center; gap: 8px; font-size: 14px; }
+    .check label { margin: 0; font-weight: 500; }
+    #note { font-size: 12px; color: #64748b; margin-top: 8px; min-height: 16px; }
+    #status { font-size: 13px; color: #16a34a; margin-top: 16px; height: 18px; }
+  </style>
+</head>
+<body>
+  <h1>💧 Water Buddy</h1>
+  <label for="interval">Remind me every</label>
+  <select id="interval">
+    <option value="15">15 minutes</option>
+    <option value="30">30 minutes</option>
+    <option value="45">45 minutes</option>
+    <option value="60">60 minutes</option>
+  </select>
+  <div class="check">
+    <input type="checkbox" id="login">
+    <label for="login">Launch at login</label>
+  </div>
+  <div id="note"></div>
+  <div id="status"></div>
+  <script src="settings.js"></script>
+</body>
+</html>
